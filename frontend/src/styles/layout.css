@@ -1,0 +1,151 @@
+.container {
+  max-width: 100%;
+  padding: 24px 40px;
+}
+
+.container-wide {
+  width: 100%;
+  padding: 24px 40px;
+}
+
+.details-container {
+  padding: 32px 48px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.card {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+
+
+
+main.container {
+  margin-top: 24px;
+}
+
+.card + .card {
+  margin-top: 32px;
+}
+
+.file-upload {
+  border: 1px dashed #c7cdd9;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f9fafb;
+  text-align: center;
+  color: #374151;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.app-shell {
+  min-height: 100vh;
+  background: #f4f6fb;
+}
+
+/* Top bar */
+.top-bar {
+  height: 64px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Main dashboard grid */
+.dashboard {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+/* Panels */
+.left-panel {
+  align-self: start;
+}
+
+.right-panel {
+  align-self: start;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.meta-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.item-card h3 {
+  margin-top: 0;
+}
+
+.item-card section {
+  margin-bottom: 16px;
+}
+
+.item-card pre {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.generated {
+  background: #eef2ff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.embedding {
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.dashboard {
+  grid-template-columns: 360px 1fr;
+}
