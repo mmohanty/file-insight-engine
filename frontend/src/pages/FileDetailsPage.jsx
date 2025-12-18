@@ -26,9 +26,9 @@ export default function FileDetailsPage() {
       </div>
 
       <div className="card meta-card">
-        <p><b>User:</b> {data.userId}</p>
-        <p><b>Use Case:</b> {data.useCase}</p>
-        <p><b>File ID:</b> {data.fileId}</p>
+        <span><b>User:</b></span><span>{data.userId}</span>
+        <span><b>Use Case:</b></span><span>{data.useCase}</span>
+        <span><b>File ID:</b></span><span className="mono">{data.fileId}</span>
       </div>
 
       {data.items.map((item, idx) => (

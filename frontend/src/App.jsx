@@ -11,32 +11,33 @@ export default function App() {
         FileInsight Engine
       </header>
 
-      <main className="dashboard">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <section className="left-panel">
-                  <UploadPage />
-                </section>
-                <section className="right-panel">
-                  <FileListPage />
-                </section>
-              </>
-            }
-          />
-
-          <Route
-            path="/files/:fileId"
-            element={
-              <section className="right-panel">
-                <FileDetailsPage />
+      {/* HOME / DASHBOARD */}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <main className="dashboard">
+              <section className="left-panel">
+                <UploadPage />
               </section>
-            }
-          />
-        </Routes>
-      </main>
+
+              <section className="right-panel">
+                <FileListPage />
+              </section>
+            </main>
+          }
+        />
+
+        {/* FILE DETAILS — FULL WIDTH */}
+        <Route
+          path="/files/:fileId"
+          element={
+            <main className="details-container">
+              <FileDetailsPage />
+            </main>
+          }
+        />
+      </Routes>
     </div>
   );
 }

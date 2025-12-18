@@ -1,84 +1,32 @@
-.container {
-  max-width: 100%;
-  padding: 24px 40px;
-}
-
-.container-wide {
-  width: 100%;
-  padding: 24px 40px;
-}
-
-.details-container {
-  padding: 32px 48px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.header {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
-.card {
-  width: 100%;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-}
-
-
-
-
-main.container {
-  margin-top: 24px;
-}
-
-.card + .card {
-  margin-top: 32px;
-}
-
-.file-upload {
-  border: 1px dashed #c7cdd9;
-  padding: 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  background: #f9fafb;
-  text-align: center;
-  color: #374151;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
+/* =========================
+   App Shell & Background
+   ========================= */
 
 .app-shell {
   min-height: 100vh;
   background: #f4f6fb;
 }
 
-/* Top bar */
+/* =========================
+   Top Navigation Bar
+   ========================= */
+
 .top-bar {
   height: 64px;
-  background: white;
+  background: #ffffff;
   display: flex;
   align-items: center;
   padding: 0 24px;
   font-size: 18px;
   font-weight: 600;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  color: #1f2937;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 }
 
-/* Main dashboard grid */
+/* =========================
+   Dashboard Layout (Home)
+   ========================= */
+
 .dashboard {
   display: grid;
   grid-template-columns: 360px 1fr;
@@ -87,13 +35,26 @@ button:disabled {
 }
 
 /* Panels */
-.left-panel {
-  align-self: start;
-}
 
+.left-panel,
 .right-panel {
   align-self: start;
 }
+
+/* =========================
+   Details Page Container
+   ========================= */
+
+.details-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px 48px;
+  max-width: 1200px;
+}
+/* =========================
+   Page Header
+   ========================= */
 
 .page-header {
   display: flex;
@@ -105,39 +66,101 @@ button:disabled {
 .page-header h1 {
   margin: 0;
   font-size: 24px;
+  font-weight: 600;
+  color: #111827;
 }
+
+/* =========================
+   Cards (Base)
+   ========================= */
+
+.card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+/* Space between stacked cards */
+.card + .card {
+  margin-top: 28px;
+}
+
+/* =========================
+   Metadata Card
+   ========================= */
 
 .meta-card {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 140px 1fr;
+  column-gap: 16px;
+  row-gap: 12px;
+  font-size: 15px;
 }
+
+/* Monospace for IDs */
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  word-break: break-all;
+}
+
+/* =========================
+   Item / Record Cards
+   ========================= */
 
 .item-card h3 {
   margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .item-card section {
   margin-bottom: 16px;
 }
 
+.item-card h4 {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* JSON blocks */
+
 .item-card pre {
   background: #f9fafb;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 10px;
   overflow-x: auto;
   font-size: 13px;
+  line-height: 1.45;
 }
+
+/* Generated summary */
 
 .generated {
   background: #eef2ff;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* =========================
+   Embedding (Collapsible)
+   ========================= */
+
+details {
+  margin-top: 12px;
 }
 
 details summary {
   cursor: pointer;
   font-weight: 500;
+  color: #2563eb;
   margin-bottom: 8px;
 }
 
@@ -146,6 +169,82 @@ details summary {
   overflow-y: auto;
 }
 
-.dashboard {
-  grid-template-columns: 360px 1fr;
+/* =========================
+   Buttons
+   ========================= */
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: 500;
+}
+
+button.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   File Upload Control
+   ========================= */
+
+.file-upload {
+  border: 1px dashed #c7cdd9;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #f9fafb;
+  text-align: center;
+  color: #374151;
+}
+
+/* =========================
+   Tables (File List)
+   ========================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+/* =========================
+   Pagination
+   ========================= */
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
 }
